@@ -200,6 +200,6 @@ AddEventHandler('qb-gangmenu:server:giveJob', function(recruit)
     if Target and Target.Functions.SetGang(Player.PlayerData.gang.name, 0) then
         TriggerClientEvent('QBCore:Notify', src, 'You Recruited ' .. (Target.PlayerData.charinfo.firstname .. ' ' .. Target.PlayerData.charinfo.lastname) .. ' To ' .. Player.PlayerData.job.label .. '', 'success')
         TriggerClientEvent('QBCore:Notify', Target.PlayerData.source, 'You\'ve Been Recruited To ' .. Player.PlayerData.job.label .. '', 'success')
-        TriggerEvent('qb-log:server:CreateLog', 'bossmenu', 'bossmenu', 'Recruit', 'yellow', Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname .. ' successfully recruited ' .. Target.PlayerData.charinfo.firstname .. ' ' .. Target.PlayerData.charinfo.lastname .. ' (' .. Player.PlayerData.gang.name .. ')', false)
+        TriggerEvent('qb-log:server:CreateLog', 'bossmenu', 'Recruit', 'yellow', Player.PlayerData.charinfo.firstname .. ' ' .. Player.PlayerData.charinfo.lastname .. ' successfully recruited ' .. Target.PlayerData.charinfo.firstname .. ' ' .. Target.PlayerData.charinfo.lastname .. ' (' .. Player.PlayerData.gang.name .. ')', false)
     end
 end)
